@@ -2,6 +2,8 @@
 
 A browser-based builder for hyperlinked PDF planners for e-paper tablets (Boox, reMarkable, Kindle Scribe, Supernote, Kobo). Pick your settings in the side panel, click through a live preview, then export the PDF.
 
+**Use it online:** <https://schmidjon.github.io/ePlanner/>
+
 It's plain HTML/CSS/JavaScript with no build step and no server code, so it can be hosted anywhere static files are served.
 
 ## Run it locally
