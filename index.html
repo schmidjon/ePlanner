@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ePlanner – Planner Builder</title>
+  <meta name="description" content="Build a hyperlinked PDF planner for e-paper tablets." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='5' y='3' width='22' height='26' rx='3' fill='%23333'/><rect x='9' y='8' width='14' height='2' fill='%23fff'/><rect x='9' y='13' width='14' height='2' fill='%23fff'/><rect x='9' y='18' width='9' height='2' fill='%23fff'/></svg>" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="css/builder.css" />
+  <link rel="stylesheet" href="css/planner.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topnav">
+      <div class="brand"><span class="logo"></span>ePlanner</div>
+      <div class="meta" id="meta"></div>
+      <div class="actions">
+        <button id="btn-share" class="ghost" title="Copy a link containing these settings">Share link</button>
+        <button id="btn-export" class="primary" title="Build the PDF and download it">Export PDF</button>
+      </div>
+    </header>
+    <aside class="panel" id="panel"></aside>
+    <main class="preview">
+      <div class="pv-bar">
+        <button id="pv-prev" class="icon" title="Previous page (←)">‹</button>
+        <select id="pv-select" title="Jump to page"></select>
+        <button id="pv-next" class="icon" title="Next page (→)">›</button>
+        <span id="pv-count" class="muted"></span>
+        <span class="grow"></span>
+        <button id="pv-back" class="ghost small" title="Go back to the previous page you viewed">Back</button>
+        <label class="muted small"><input type="checkbox" id="pv-fit" checked /> Fit</label>
+      </div>
+      <div class="pv-stage" id="pv-stage"><div class="pv-scale" id="pv-scale"><div class="planner" id="pv-page"></div></div></div>
+      <p class="pv-hint muted">Links work in the preview — click a tab, date or breadcrumb to follow it, just like on your tablet.</p>
+    </main>
+  </div>
+  <div id="overlay" hidden><div class="ov-box"><div class="spinner"></div><div id="ov-text">Preparing pages…</div></div></div>
+  <div id="toast" hidden></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
